@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:studio16/UI/home_page.dart';
@@ -19,7 +21,8 @@ class _WelcomeState extends State<walkthrough> {
   int pageLength;
 
   @override
-  void initState() {
+  void initState()
+  {
     currentIndexPage = 0;
     pageLength = 3;
     super.initState();

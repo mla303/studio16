@@ -1,34 +1,71 @@
 {
   "project_info": {
-    "project_number": "345638270244",
-    "firebase_url": "https://studio16.firebaseio.com",
-    "project_id": "studio16",
-    "storage_bucket": "studio16.appspot.com"
+    "project_number": "132290715354",
+    "firebase_url": "https://studio16-admin.firebaseio.com",
+    "project_id": "studio16-admin",
+    "storage_bucket": "studio16-admin.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:345638270244:android:76a06d6ffe7a284bf12fb1",
+        "mobilesdk_app_id": "1:132290715354:android:8aac7784ba02d77aeacfe3",
         "android_client_info": {
           "package_name": "mla303.studio16"
         }
       },
       "oauth_client": [
         {
-          "client_id": "345638270244-sireer8th14md7hgs7jn7f02up7kudfo.apps.googleusercontent.com",
+          "client_id": "132290715354-jcsf6hejuf22ur40bjpin247pniloj32.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mla303.studio16",
+            "certificate_hash": "777a82d29daad14a765bd242554cdf19bbfee434"
+          }
+        },
+        {
+          "client_id": "132290715354-0k0tb00t9lugfhcvvd2r44cr88it1crq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBhu53ebMa08BicKvxDnGfbLV4V2ximWRA"
+          "current_key": "AIzaSyCHQTwIZ-5Oa0e4fe1UrhtqPHJIzQJsnzs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "345638270244-sireer8th14md7hgs7jn7f02up7kudfo.apps.googleusercontent.com",
+              "client_id": "132290715354-0k0tb00t9lugfhcvvd2r44cr88it1crq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132290715354:android:c726aad919bbcd61eacfe3",
+        "android_client_info": {
+          "package_name": "mla303.studio16_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132290715354-0k0tb00t9lugfhcvvd2r44cr88it1crq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHQTwIZ-5Oa0e4fe1UrhtqPHJIzQJsnzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132290715354-0k0tb00t9lugfhcvvd2r44cr88it1crq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
