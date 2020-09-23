@@ -91,10 +91,10 @@ class _home_pageState extends State<home_page> {
           child: Column(
         children: <Widget>[
           Container(
+
             width: width,
             height: height / 8,
             decoration: new BoxDecoration(
-
 //                boxShadow: [
 ////                  BoxShadow(
 ////                    color: Color(0xffF18220),
@@ -161,11 +161,12 @@ class _home_pageState extends State<home_page> {
 
 
           Container(
-//                color: Colors.redAccent,
+              // color: Colors.redAccent,
             padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 0.0),
-            height: MediaQuery.of(context).size.height / 1.2,
+            height: MediaQuery.of(context).size.height / 1.3,
 
             child: StreamBuilder<QuerySnapshot>(
+
               stream: Firestore.instance.collection("studio16").snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot> snapshot) {
