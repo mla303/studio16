@@ -151,7 +151,7 @@ class _home_pageState extends State<home_page> {
                       icon: Icon(
                         Icons.exit_to_app,
                         color: Colors.white,
-                        size: 28,
+                        size: 24,
                       ))
 
                 ],

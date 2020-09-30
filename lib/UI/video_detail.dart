@@ -65,17 +65,18 @@ class _video_detailState extends State<video_detail> {
 
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Container(
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Container(
 
-                width: width,
-                height: height/8,
+                  width: width,
+                  height: height/8,
 
-                decoration: new BoxDecoration(
+                  decoration: new BoxDecoration(
 
 //                boxShadow: [
 ////                  BoxShadow(
@@ -88,107 +89,108 @@ class _video_detailState extends State<video_detail> {
 ////                    ),
 ////                  )
 //                ],
-                ),
-
-                child: Card(
-                  elevation: 0,
-                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
-                  color: Colors.black,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20)
-                      )
                   ),
 
-                  child: Center(
-                    child: Text(
-                      Strings.splash,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color:  Color(0xffFFFFFF),
-                          fontSize: height / 40,
-                          fontWeight: FontWeight.w400),
+                  child: Card(
+                    elevation: 0,
+                    margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+                    color: Colors.black,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20)
+                        )
+                    ),
+
+                    child: Center(
+                      child: Text(
+                        Strings.splash,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color:  Color(0xffFFFFFF),
+                            fontSize: height / 40,
+                            fontWeight: FontWeight.w400),
+                      ),
                     ),
                   ),
                 ),
-              ),
 
-              Center(
-                child:  _playView(),
-              ),
+                Center(
+                  child:  _playView(),
+                ),
 
-              SizedBox(height: height/40,),
+                SizedBox(height: height/40,),
 
-              Container(
-                width: width/1.1,
+                Container(
+                  width: width/1.1,
 //              color: Colors.red,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
 //                mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Text('${data.videotitle}',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),),
-                    SizedBox(height: height/70,),
-                    Text(
-                      '${data.videodesc}',
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    children: <Widget>[
+                      Text('${data.videotitle}',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),),
+                      SizedBox(height: height/70,),
+                      Text(
+                        '${data.videodesc}',
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                      ),),
 
 
-                    Divider(
-                    ),
+                      Divider(
+                      ),
 
 
-                    SizedBox(height: height/20,),
+                      SizedBox(height: height/20,),
 
-                    Column(
-                      children: <Widget>[
-                        Text("Video Powered by:",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w300
+                      Column(
+                        children: <Widget>[
+                          Text("Video Powered by:",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w300
+                            ),
                           ),
-                        ),
 
-                        Container(
-                          height: height/6,
-                          padding: EdgeInsets.all(18.0),
-                          margin: EdgeInsets.only(right: 16.0),
-                          decoration: ShapeDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("images/Boss.jpeg"),
-                                fit: BoxFit.contain
-                              ),
-                              shape: PolygonBorder(
-                                  sides: 7,
-                                  borderRadius: 8.0,
-                                  border: BorderSide(color: Colors.blueGrey, width: 2))),
+                          Container(
+                            height: height/6,
+                            padding: EdgeInsets.all(18.0),
+                            margin: EdgeInsets.only(right: 16.0),
+                            decoration: ShapeDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("images/Boss.jpeg"),
+                                  fit: BoxFit.contain
+                                ),
+                                shape: PolygonBorder(
+                                    sides: 7,
+                                    borderRadius: 8.0,
+                                    border: BorderSide(color: Colors.blueGrey, width: 2))),
 //                    child: Image(image: AssetImage("images/Boss.jpeg"),),
-                        ),
-
-                        Text("Mahfer Arslan",
-                          style: TextStyle(
-                              color: Colors.black54,
-                              fontWeight: FontWeight.w400
                           ),
-                        ),
-                      ],
-                    ),
+
+                          Text("Mahfer Arslan",
+                            style: TextStyle(
+                                color: Colors.black54,
+                                fontWeight: FontWeight.w400
+                            ),
+                          ),
+                        ],
+                      ),
 
 
 
-                  ],
+                    ],
+                  ),
                 ),
-              ),
 
 
 
-            ],
+              ],
+            ),
           ),
         ),
       ),

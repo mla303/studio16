@@ -8,6 +8,8 @@ import 'package:studio16/UI/walkthrough_2.dart';
 import 'package:studio16/UI/walkthrough_3.dart';
 import 'package:page_transition/page_transition.dart';
 
+import 'login_screen.dart';
+
 
 class walkthrough extends StatefulWidget {
   @override
@@ -56,7 +58,7 @@ class _WelcomeState extends State<walkthrough> {
                 context,
                 PageTransition(
                   type: PageTransitionType.rightToLeftWithFade,
-                    child: home_page(),
+                    child: login_screen(),
                 ));
               },
               child: Container(
