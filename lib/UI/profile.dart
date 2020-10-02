@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:studio16/UI/login_screen.dart';
 import 'editprofile.dart';
 
 
@@ -12,12 +13,11 @@ class profile extends StatefulWidget {
 }
 
 class _profileState extends State<profile> {
-  String name= 'Ali Talib';
+  String name= 'Mehfer Arslan';
   String id= '810410';
-  String phoneNumber= '03400888104';
-  String email = 'alitalib16867@gmail.com';
-  String username = 'ali420';
-  String address = 'DHA pahse 2 Islamabad';
+  String phoneNumber= '+41 79 308 45 02';
+  String email = 'admin@gmail.com';
+  String username = 'admin333';
 
 
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _profileState extends State<profile> {
                 alignment: Alignment.topCenter,
                 child: CircleAvatar(
                   backgroundImage:
-                  ExactAssetImage('images/person.jpg'),
+                  ExactAssetImage('images/Boss.jpeg'),
                   minRadius: height / 30,
                   maxRadius: height / 15,
 
@@ -50,7 +50,7 @@ class _profileState extends State<profile> {
                     fontSize: height / 30,
                     fontWeight: FontWeight.bold),
               ),
-              Text('UI/UX Designer',
+              Text('Admin',
                 style: TextStyle(
                   fontSize: height/55
                 ),
@@ -81,13 +81,36 @@ class _profileState extends State<profile> {
 
                     Text("Email",style: TextStyle(fontSize: height/60,color: Colors.black45),),
                     SizedBox(height: 4),
-                    Text('$email)',style: TextStyle(fontSize: height/45),),
+                    Text('$email',style: TextStyle(fontSize: height/45),),
 //
                     SizedBox(height: height/30,),
 
                     Text("Contact No.",style: TextStyle(fontSize: height/60,color: Colors.black45),),
                     SizedBox(height: 4),
                     Text('$phoneNumber',style: TextStyle(fontSize: height/45),),
+
+                    SizedBox(height: height/20,),
+
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushReplacement(
+                            context,
+                            PageTransition(
+                              curve: Curves.decelerate,
+                              type: PageTransitionType.rotate,
+                              alignment: Alignment.topCenter,
+                              child: login_screen(),
+                            ));
+                      },
+                      child: Row(
+                        children: [
+                          Icon(Icons.exit_to_app,size: 18,color: Color(0xffED7457),),
+                          SizedBox(width: 6,),
+                          Text("Logout",style: TextStyle(fontSize: height/45,color: Color(0xffED7457),fontWeight: FontWeight.bold),),
+                        ],
+                      ),
+                    ),
+
 
 
                     SizedBox(height: height/15,),
