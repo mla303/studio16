@@ -91,22 +91,22 @@ class _SplashState extends State<Splash> {
               ),
             ),
 
-            Align(
-              alignment: FractionalOffset.bottomCenter,
-              child: Container(
-                width: width/1.5,
-                child: Text(
-                  "By creating an account, you agree to our Terms of Service and Privacy Policy",
-                  maxLines: 2,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 10
-                  ),
-                ),
-              ),
-            ),
+            // Align(
+            //   alignment: FractionalOffset.bottomCenter,
+            //   child: Container(
+            //     width: width/1.5,
+            //     child: Text(
+            //       "By creating an account, you agree to our Terms of Service and Privacy Policy",
+            //       maxLines: 2,
+            //       textAlign: TextAlign.center,
+            //       style: TextStyle(
+            //           color: Colors.white,
+            //           fontWeight: FontWeight.w400,
+            //           fontSize: 10
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         )
       ),

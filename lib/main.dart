@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget
       debugShowCheckedModeBanner: false,
       home: Splash(),
       routes: <String, WidgetBuilder>{
-
         '/Home': (BuildContext context) => new walkthrough()
       },
     );

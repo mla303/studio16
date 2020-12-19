@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
-import 'profile.dart';
+import 'aboutUs.dart';
 
 
 
@@ -22,7 +22,7 @@ class NavigationBar extends State<navigation_bar> {
   final _pageOptions = [
 
     home_page(),
-    profile(),
+    aboutUs(),
 
 
 

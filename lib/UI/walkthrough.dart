@@ -9,6 +9,7 @@ import 'package:studio16/UI/walkthrough_3.dart';
 import 'package:page_transition/page_transition.dart';
 
 import 'login_screen.dart';
+import 'navigation_bar.dart';
 
 
 class walkthrough extends StatefulWidget {
@@ -48,7 +49,7 @@ class _WelcomeState extends State<walkthrough> {
         ),
 
         Positioned(
-          bottom: MediaQuery.of(context).size.height /10,
+          bottom: MediaQuery.of(context).size.height /20,
           child: Padding(
             padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.18),
             child: GestureDetector(
@@ -57,8 +58,11 @@ class _WelcomeState extends State<walkthrough> {
             Navigator.pushReplacement(
                 context,
                 PageTransition(
+                  duration: Duration(milliseconds: 1000),
+                  curve: Curves.easeIn,
+                  alignment: Alignment.topCenter,
                   type: PageTransitionType.rightToLeftWithFade,
-                    child: login_screen(),
+                    child: navigation_bar(),
                 ));
               },
               child: Container(
@@ -80,7 +84,7 @@ class _WelcomeState extends State<walkthrough> {
         ),
 
         Positioned(
-          bottom: MediaQuery.of(context).size.height / 20,
+          bottom: MediaQuery.of(context).size.height / 6,
           // left: MediaQuery.of(context).size.width * 0.35,
           child: Padding(
             padding:
@@ -102,22 +106,22 @@ class _WelcomeState extends State<walkthrough> {
           ),
         ),
 
-        Align(
-          alignment: FractionalOffset.bottomCenter,
-          child: Container(
-            width: MediaQuery.of(context).size.width/1.5,
-            child: Text(
-              "By creating an account, you agree to our Terms of Service and Privacy Policy",
-              maxLines: 2,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 10
-              ),
-            ),
-          ),
-        ),
+        // Align(
+        //   alignment: FractionalOffset.bottomCenter,
+        //   child: Container(
+        //     width: MediaQuery.of(context).size.width/1.5,
+        //     child: Text(
+        //       "By creating an account, you agree to our Terms of Service and Privacy Policy",
+        //       maxLines: 2,
+        //       textAlign: TextAlign.center,
+        //       style: TextStyle(
+        //           color: Colors.white,
+        //           fontWeight: FontWeight.w400,
+        //           fontSize: 10
+        //       ),
+        //     ),
+        //   ),
+        // ),
 
 //
 
