@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 
 import 'strings.dart';
@@ -14,16 +15,14 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   startTime() async {
     var _duration = new Duration(milliseconds: 2000);
-    return new Timer(_duration, navigationPage);
+    return new Timer(_duration, setValue);
   }
 
-  void navigationPage() {
 
-    Navigator.of(context).pushReplacementNamed('/Home');
-  }
 
   @override
   void initState() {
+    setValue();
     super.initState();
     startTime();
   }
@@ -112,4 +111,16 @@ class _SplashState extends State<Splash> {
       ),
     );
   }
+
+  void setValue() async {
+    final prefs = await SharedPreferences.getInstance();
+    int launchCount = prefs.getInt('counter') ?? 0;
+    prefs.setInt('counter', launchCount + 1);
+    if (launchCount == 0) {
+      Navigator.of(context).pushReplacementNamed('/walkthrough');
+    } else {
+      Navigator.of(context).pushReplacementNamed('/main');
+    }
+  }
+
 }

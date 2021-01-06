@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:studio16/UI/home_page.dart';
 
+import 'UI/navigation_bar.dart';
 import 'UI/splash_screen.dart';
 import 'UI/walkthrough.dart';
 
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget
       debugShowCheckedModeBanner: false,
       home: Splash(),
       routes: <String, WidgetBuilder>{
-        '/Home': (BuildContext context) => new walkthrough()
+        '/walkthrough': (BuildContext context) => new walkthrough(),
+        '/main': (BuildContext context) => new navigation_bar()
       },
     );
   }

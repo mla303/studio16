@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:studio16/UI/home_page.dart';
 import 'package:studio16/UI/walkthrough_1.dart';
 import 'package:studio16/UI/walkthrough_2.dart';
@@ -26,6 +27,7 @@ class _WelcomeState extends State<walkthrough> {
   @override
   void initState()
   {
+
     currentIndexPage = 0;
     pageLength = 3;
     super.initState();
@@ -129,5 +131,8 @@ class _WelcomeState extends State<walkthrough> {
       ],
     ));
   }
+
+
+
 }
 

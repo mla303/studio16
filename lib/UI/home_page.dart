@@ -160,17 +160,18 @@ class _home_pageState extends State<home_page> {
           ),
 
 
-          Container(
+          Expanded(
               // color: Colors.redAccent,
-            padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 0.0),
-            height: MediaQuery.of(context).size.height / 1.3,
+            // padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 0.0),
+            // height: MediaQuery.of(context).size.height,
 
             child: StreamBuilder<QuerySnapshot>(
 
               stream: Firestore.instance.collection("studio16").snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot> snapshot) {
-                if (!snapshot.hasData) return new CircularProgressIndicator();
+                if (!snapshot.hasData) return Center(
+                  child: new Image(image: AssetImage("images/loading.gif")));
                 return new ListView(children: getExpenseItems(snapshot));
               },
             ),
