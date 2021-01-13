@@ -22,9 +22,9 @@ class _SplashState extends State<Splash> {
 
   @override
   void initState() {
-    setValue();
-    super.initState();
     startTime();
+    super.initState();
+    // setValue();
   }
 
   @override
@@ -76,6 +76,20 @@ class _SplashState extends State<Splash> {
                     fontWeight: FontWeight.w600,
                     fontSize: 44
                   ),
+                ),
+              )
+            ),
+        Positioned(
+              left: 40,
+              top: 300,
+              child: Text(
+                Strings.walkthrough1Text1,
+                maxLines: 4,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14
                 ),
               )
             ),

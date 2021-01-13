@@ -73,24 +73,10 @@ class _video_detailState extends State<video_detail> {
               children: <Widget>[
                 Container(
 
-                  width: width,
-                  height: height/8,
-
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 8,
                   decoration: new BoxDecoration(
-
-//                boxShadow: [
-////                  BoxShadow(
-////                    color: Color(0xffF18220),
-////                    blurRadius: 20.0, // soften the shadow
-////                    spreadRadius: 0.0, //extend the shadow
-////                    offset: Offset(
-////                      -2.0, // Move to right 10  horizontally
-////                      -10.0, // Move to bottom 10 Vertically
-////                    ),
-////                  )
-//                ],
                   ),
-
                   child: Card(
                     elevation: 0,
                     margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
@@ -98,19 +84,35 @@ class _video_detailState extends State<video_detail> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20)
-                        )
-                    ),
+                            bottomRight: Radius.circular(20))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
 
-                    child: Center(
-                      child: Text(
-                        Strings.splash,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color:  Color(0xffFFFFFF),
-                            fontSize: height / 40,
-                            fontWeight: FontWeight.w400),
-                      ),
+
+                        IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: Icon(
+                              Icons.arrow_back_ios_outlined,
+                              color: Colors.white,
+                              size: 24,
+                            )),
+                        SizedBox(width: MediaQuery.of(context).size.width/3.7,),
+                        Text(
+                          Strings.splash,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color(0xffFFFFFF),
+                              fontSize: MediaQuery.of(context).size.height / 40,
+                              fontWeight: FontWeight.w400),
+                        ),
+
+
+
+
+                      ],
                     ),
                   ),
                 ),
