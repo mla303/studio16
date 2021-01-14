@@ -76,6 +76,7 @@ class _home_pageState extends State<home_page> {
             IconButton(
                 onPressed: () {
                   SystemNavigator.pop();
+//                  exit(0);
                 },
                 icon: Icon(
                   Icons.exit_to_app,

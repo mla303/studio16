@@ -49,36 +49,34 @@ class NavigationBar extends State<navigation_bar> {
         key: _scaffoldKey,
 
         body: _pageOptions[_selectedTab],
-        bottomNavigationBar: SizedBox(height: 52,
-          child: BottomNavigationBar(
+        bottomNavigationBar: BottomNavigationBar(
 
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            type: BottomNavigationBarType.fixed,
-            currentIndex: _selectedTab,
-            selectedItemColor: Color(0xffED7457),
-            elevation: 2,
-            onTap: (int index) {
-              setState(() {
-                  _selectedTab = index;
-                });
-            },
-
-
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined),
-                title: Text('Home',style: TextStyle(fontSize: height/60),),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline),
-                title: Text('Home',style: TextStyle(fontSize: height/60),),
-              ),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _selectedTab,
+          selectedItemColor: Color(0xffED7457),
+          elevation: 2,
+          onTap: (int index) {
+            setState(() {
+                _selectedTab = index;
+              });
+          },
 
 
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined),
+              title: Text('Home',style: TextStyle(fontSize: height/60),),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline),
+              title: Text('Home',style: TextStyle(fontSize: height/60),),
+            ),
 
-            ],
-          ),
+
+
+          ],
         ),
       ),
     );
